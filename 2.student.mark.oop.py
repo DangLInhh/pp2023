@@ -45,14 +45,15 @@ class markInformation:
 print("The course's ID you want to input mark:")
 intput = input()
 Mark = []
-if intput in couID:
- for i in range(x):
+while intput not in couID:
+   print("Invalid ID.")
+   intput = input()
+for i in range(x):
    print("Mark for student",i+1,":")
    Score = int(input())
    Marklists = markInformation(Score)
    Mark.append(Marklists)
-else:
- print("Invalid ID.")
+
 print('\n')
 for i in range(x):
     print('\n')
